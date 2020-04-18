@@ -1,0 +1,27 @@
+{
+  "name": "ourstreet-frontend",
+  "version": "1.0.0",
+  "description": "rebuilding community, one street at a time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllForClimate/ourstreet.git"
+  },
+  "author": "Xavier Damman <@xdamman>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AllForClimate/ourstreet/issues"
+  },
+  "homepage": "https://github.com/AllForClimate/ourstreet#readme",
+  "dependencies": {
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reflexbox": "^4.0.6",
+    "styled-components": "^5.1.0",
+    "styled-system": "^5.1.5"
+  }
+}
