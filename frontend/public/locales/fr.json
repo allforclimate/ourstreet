@@ -1,0 +1,7 @@
+{
+  "password.label": "Quel est le mot de passe?",
+  "submit.button": "continuer",
+ "street.forms.intro": "Merci de bien vouloir remplir ce formulaire pour qu'on puisse apprendre à se connaitre!",
+  "street.forms.disclaimer": "(Ces informations seront partagées qu'avec les résidents de notre rue)",
+  "error.wrongPassword": "mauvais mot de passe"
+}
