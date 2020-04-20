@@ -7,7 +7,7 @@ import ShowStreetForms from '../components/ShowStreetForms';
 import { IntlContext } from '../lib/i18n';
 
 const Page = styled.div`
-  max-width: 960px;
+  max-width: 660px;
   padding: 16px;
   margin: 0 auto;
 `;

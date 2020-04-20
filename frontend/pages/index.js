@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Flex, Box } from 'reflexbox/styled-components'
 
 const Page = styled.div`
-  max-width: 960px;
+  max-width: 660px;
   padding: 16px;
   margin: 0 auto;
 `;

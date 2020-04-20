@@ -92,6 +92,8 @@ const StyledInput = styled.input`
 const StyledSubmit = styled.input`
   border: 1px solid black;
   margin: 20px 0;
+  background: white;
+  border-radius: 2px;
   padding: 10px;
   font-size: 16px;
 `;
