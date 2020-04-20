@@ -1,1 +1,8 @@
-{}
+{
+  "password.label": "Wat is het wachtwoord?",
+  "submit.button": "doorgaan",
+  "street.forms.intro": "Vul dit formulier in zodat we elkaar kunnen leren kennen!",
+  "street.forms.disclaimer": "(Deze informatie wordt alleen gedeeld met bewoners van onze straat)",
+  "error.wrongPassword": "fout wachtwoord",
+  "loading": "loading..."
+}

@@ -3,5 +3,6 @@
   "submit.button": "submit",
   "street.forms.intro": "Please fill out this form so that we can get to know each other!",
   "street.forms.disclaimer": "(The data collected will only be shared with the residents of our street)",
-  "error.wrongPassword": "wrong password"
+  "error.wrongPassword": "wrong password",
+  "loading": "loading..."
 }

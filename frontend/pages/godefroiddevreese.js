@@ -12,6 +12,12 @@ const Page = styled.div`
   margin: 0 auto;
 `;
 
+const Loading = styled.div`
+  text-align: center;
+  margin: 75px 0;
+  text-transform: uppercase;
+`;
+
 class StreetPage extends React.Component {
 
   constructor(props) {
@@ -22,7 +28,7 @@ class StreetPage extends React.Component {
 
   componentDidMount() {
     const savedPassword = window.localStorage.getItem('password');
-    savedPassword && this.getStreetData(savedPassword)
+    savedPassword && this.getStreetData(savedPassword);
   }
 
   savePassword(password) {
@@ -30,18 +36,19 @@ class StreetPage extends React.Component {
   }
 
   async getStreetData(password) {
+    this.setState({ loading: true });
     try {
       const res = await axios({
         url: '/api/getStreetData',
         method: 'post',
         data: { password }
       });
-      this.setState({ data: res.data });
+      this.setState({ data: res.data, loading: false });
       this.savePassword(password);
     } catch (e) {
       if (e.response.status === 401) {
         const error = { code: 401, message: 'wrongPassword' };
-        this.setState({ error });
+        this.setState({ error, loading: false });
       }
     }
   }
@@ -51,10 +58,9 @@ class StreetPage extends React.Component {
   }
 
   render() {
-    const { data, error } = this.state
-    const showAskPassword = !data;
+    const { data, error, loading } = this.state
+    const showAskPassword = !data && !loading;
     const { locale, messages } = this.props;
-
     return (
       <IntlContext.Provider value={{ locale, messages }}>
         <Page>
@@ -62,6 +68,7 @@ class StreetPage extends React.Component {
             <img src="/images/header-godefroiddevreese.png" style={{ width: '100%', maxWidth: '600px' }} />
           </center>
           <Box mt={4}>
+            {loading && <Loading>{messages['loading']}</Loading>}
             {showAskPassword &&
               <AskPassword onSubmit={this.handleSubmit} error={error} />
             }
