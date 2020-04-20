@@ -1,5 +1,7 @@
 {
   "env": {
-    "PASSWORD": "@password"
+    "PASSWORD": "@password",
+    "FORM_URL": "@form_url",
+    "RESULTS_URL": "@results_url"
   }
 }

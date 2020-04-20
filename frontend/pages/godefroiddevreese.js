@@ -77,12 +77,14 @@ export default StreetPage;
 
 export async function getServerSideProps(context) {
   try {
+    const url = `${context.req.headers['x-forwarded-proto'] || 'http'}://${process.env.NOW_URL}/api/getLocale`;
+    console.log(">>> calling api", url)
     const res = await axios({
       method: 'get',
       headers: {
         'accept-language': context.req.headers['accept-language']
       },
-      url: 'http://localhost:3000/api/getLocale'
+      url
     });
     const { locale, messages } = res.data;
     return {
