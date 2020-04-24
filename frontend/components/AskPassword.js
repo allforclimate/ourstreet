@@ -130,6 +130,7 @@ class AskPassword extends React.Component {
     return (
       <Flex flexWrap="wrap">
         <form onSubmit={this.handleSubmit}>
+          <p>{t('password.intro')}</p>
           <InputField>
             <StyledInput
               type="password"

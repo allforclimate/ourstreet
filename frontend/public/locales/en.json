@@ -1,8 +1,11 @@
 {
+  "password.intro": "If you are part of this community, enter the password to access special content.",
   "password.label": "What's the password?",
   "submit.button": "submit",
   "street.forms.intro": "Please fill out this form so that we can get to know each other!",
   "street.forms.disclaimer": "(The data collected will only be shared with the residents of our street)",
   "error.wrongPassword": "wrong password",
-  "loading": "loading..."
+  "loading": "loading...",
+  "sections.newsfeed.title": "Newsfeed",
+  "newsfeed.article.viewStory": "View story"
 }

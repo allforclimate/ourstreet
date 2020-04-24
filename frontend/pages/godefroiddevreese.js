@@ -4,6 +4,7 @@ import { Box } from 'reflexbox/styled-components'
 import axios from 'axios'
 import AskPassword from '../components/AskPassword';
 import ShowStreetForms from '../components/ShowStreetForms';
+import Newsfeed from '../components/Newsfeed';
 import { IntlContext } from '../lib/i18n';
 
 const Page = styled.div`
@@ -73,6 +74,7 @@ class StreetPage extends React.Component {
               <AskPassword onSubmit={this.handleSubmit} error={error} />
             }
             {data && <ShowStreetForms data={data} />}
+            <Newsfeed />
           </Box>
         </Page>
       </IntlContext.Provider>
