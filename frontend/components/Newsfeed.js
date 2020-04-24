@@ -36,12 +36,20 @@ const Emoji = styled.span`
 const Article = styled.div``;
 const Title = styled.h3`
   margin: 0;
+  line-height: 1.2;
+  & a {
+    text-decoration: none;
+  }
 `;
 const Description = styled.p`
   margin-top: 5px;
 `;
 const Metadata = styled.span`
   color: #555;
+  & a {
+    text-decoration: none;
+    color: #555;
+  }
 `;
 
 const news = [

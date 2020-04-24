@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Flex, Box } from 'reflexbox/styled-components'
+import Link from 'next/Link';
+import Footer from '../components/Footer';
 
 const Page = styled.div`
   max-width: 660px;
@@ -7,12 +9,18 @@ const Page = styled.div`
   margin: 0 auto;
 `;
 
-function Index({ letters }) {
+function Index({ locale, messages }) {
   return (
     <Page>
       <center>
         <img src="/images/header-ourstreet.png" style={{ width: '100%', maxWidth: '600px' }} />
       </center>
+
+      <h2>1030 Schaerbeek</h2>
+      <ul>
+        <li><Link href="/godefroiddevreese">Godefroid Devreese</Link></li>
+      </ul>
+      <Footer />
     </Page>
   )
 }
