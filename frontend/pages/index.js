@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex, Box } from 'reflexbox/styled-components'
-import Link from 'next/Link';
+import Link from 'next/link';
 import Footer from '../components/Footer';
 
 const Page = styled.div`
@@ -18,7 +18,7 @@ function Index({ locale, messages }) {
 
       <h2>1030 Schaerbeek</h2>
       <ul>
-        <li><Link href="/godefroiddevreese">Godefroid Devreese</Link></li>
+        <li><Link href="/godefroiddevreese"><a>Godefroid Devreese</a></Link></li>
       </ul>
       <Footer />
     </Page>

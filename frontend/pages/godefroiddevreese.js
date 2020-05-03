@@ -5,6 +5,7 @@ import axios from 'axios'
 import AskPassword from '../components/AskPassword';
 import ShowStreetForms from '../components/ShowStreetForms';
 import Newsfeed from '../components/Newsfeed';
+import Footer from '../components/Footer';
 import { IntlContext } from '../lib/i18n';
 
 const Page = styled.div`
@@ -76,6 +77,7 @@ class StreetPage extends React.Component {
             {data && <ShowStreetForms data={data} />}
             <Newsfeed />
           </Box>
+          <Footer />
         </Page>
       </IntlContext.Provider>
     )

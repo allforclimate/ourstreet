@@ -54,6 +54,12 @@ const Metadata = styled.span`
 
 const news = [
   {
+    title: "Open letter to the commune of Schaerbeek to give priority to pedestrians",
+    url: "https://openletter.earth/open-letter-to-the-city-of-schaerbeek-give-priority-to-pedestrians-runners-and-bicycles-54952bee",
+    description: "Please sign with us this letter to make sure that pedestrians, runners and cyclists can use the road like they will be able to do in 1000 Brussels.",
+    date: "2020-05-02"
+  },
+  {
     title: "'Staying Alive': deze buren dansen elke avond in hun straat",
     url: "https://www.bruzz.be/videoreeks/donderdag-23-april-2020/video-staying-alive-deze-buren-dansen-elke-avond-hun-straat",
     description: "Xavier en Leen wonen nog maar net in Schaarbeek maar zijn nu al de grootste sfeermakers van hun straat. Elke avond om 20 uur brengen ze de buren samen op de tonen van 'Staying Alive'. Ze klappen en dansen voor de mensen die in de zorgsector werken en leren zo hun buren kennen.",
