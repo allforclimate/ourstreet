@@ -6,7 +6,7 @@ import AskPassword from '../components/AskPassword';
 import ShowStreetForms from '../components/ShowStreetForms';
 import Newsfeed from '../components/Newsfeed';
 import Footer from '../components/Footer';
-import { IntlContext } from '../lib/i18n';
+import { withIntl } from '../lib/i18n';
 
 const Page = styled.div`
   max-width: 660px;
@@ -61,47 +61,25 @@ class StreetPage extends React.Component {
 
   render() {
     const { data, error, loading } = this.state
+    const { t } = this.props;
     const showAskPassword = !data && !loading;
-    const { locale, messages } = this.props;
     return (
-      <IntlContext.Provider value={{ locale, messages }}>
-        <Page>
-          <center>
-            <img src="/images/header-godefroiddevreese.png" style={{ width: '100%', maxWidth: '600px' }} />
-          </center>
-          <Box mt={4}>
-            {loading && <Loading>{messages['loading']}</Loading>}
-            {showAskPassword &&
-              <AskPassword onSubmit={this.handleSubmit} error={error} />
-            }
-            {data && <ShowStreetForms data={data} />}
-            <Newsfeed />
-          </Box>
-          <Footer />
-        </Page>
-      </IntlContext.Provider>
+      <Page>
+        <center>
+          <img src="/images/header-godefroiddevreese.png" style={{ width: '100%', maxWidth: '600px' }} />
+        </center>
+        <Box mt={4}>
+          {loading && <Loading>{t('loading')}</Loading>}
+          {showAskPassword &&
+            <AskPassword onSubmit={this.handleSubmit} error={error} />
+          }
+          {data && <ShowStreetForms data={data} />}
+          <Newsfeed />
+        </Box>
+        <Footer />
+      </Page>
     )
   }
 }
 
-export default StreetPage;
-
-export async function getServerSideProps(context) {
-  try {
-    const url = `${context.req.headers['x-forwarded-proto'] || 'http'}://${process.env.NOW_URL}/api/getLocale`;
-    console.log(">>> calling api", url)
-    const res = await axios({
-      method: 'get',
-      headers: {
-        'accept-language': context.req.headers['accept-language']
-      },
-      url
-    });
-    const { locale, messages } = res.data;
-    return {
-      props: { locale, messages },
-    }
-  } catch (e) {
-    console.log(">>> error", e);
-  }
-}
+export default withIntl(StreetPage);

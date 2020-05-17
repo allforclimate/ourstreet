@@ -1,6 +1,5 @@
 module.exports = async (req, res) => {
   const { body } = req
-
   if (body.password !== process.env.PASSWORD) {
     return res.status(401).end('unauthorized');
   }
