@@ -1,14 +1,15 @@
-import App from 'next/app'
-import React from 'react'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import { IntlContext, getLocaleFromHeaders } from '../lib/i18n';
+import App from "next/app";
+import React from "react";
+import Gun from "gun";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { IntlContext, getLocaleFromHeaders } from "../lib/i18n";
 
 const theme = {
   colors: {
-    primary: 'black',
+    primary: "black",
   },
-  fontSizes: ['12pt', '16pt', '24pt', '32pt', '48pt','64pt']
-}
+  fontSizes: ["12pt", "16pt", "24pt", "32pt", "48pt", "64pt"],
+};
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -44,24 +45,33 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 class MyApp extends App {
+  constructor() {
+    super();
+    this.gun = Gun("http://localhost:8765" + "/gun");
+  }
+  componentDidMount() {
+    window.gun = this.gun; //To have access to gun object in browser console
+  }
   render() {
-    const { Component, pageProps, locale, messages } = this.props
+    const { Component, pageProps, locale, messages } = this.props;
     return (
       <IntlContext.Provider value={{ locale, messages }}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Component gun={this.gun} {...pageProps} />
+        </ThemeProvider>
       </IntlContext.Provider>
-    )
+    );
   }
 }
 
 MyApp.getInitialProps = async (appContext) => {
-  const i18n = getLocaleFromHeaders(appContext.ctx.req && appContext.ctx.req.headers);
+  const i18n = getLocaleFromHeaders(
+    appContext.ctx.req && appContext.ctx.req.headers
+  );
   const appProps = await App.getInitialProps(appContext);
 
   return { ...appProps, ...i18n };
-}
+};
 
 export default MyApp;
