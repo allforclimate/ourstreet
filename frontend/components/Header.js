@@ -1,6 +1,6 @@
 import { reduce } from "lodash";
 
-export default ({ street }) => {
+const Header = ({ street }) => {
   return (
     <center>
       <table>
@@ -12,7 +12,7 @@ export default ({ street }) => {
             />
           </td>
           <td
-            rowspan={2}
+            rowSpan={2}
             width={"25%"}
             style={{
               backgroundImage: "url(/images/header-black-bee.png)",
@@ -39,3 +39,5 @@ export default ({ street }) => {
     </center>
   );
 };
+
+export default Header;
