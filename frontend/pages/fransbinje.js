@@ -65,14 +65,14 @@ class StreetPage extends React.Component {
     const showAskPassword = !data && !loading;
     return (
       <Page>
-        <Header street={"godefroiddevreese"} />
+        <Header street={"fransbinje"} />
         <Box mt={4}>
           {loading && <Loading>{t("loading")}</Loading>}
           {showAskPassword && (
             <AskPassword onSubmit={this.handleSubmit} error={error} />
           )}
           {data && <ShowStreetForms data={data} />}
-          <Newsfeed street={"godefroiddevreese"} />
+          <Newsfeed street={"fransbinje"} />
         </Box>
         <Footer />
       </Page>
