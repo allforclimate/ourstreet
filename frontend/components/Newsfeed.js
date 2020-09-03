@@ -54,7 +54,7 @@ const Metadata = styled.span`
 const news = {
   fransbinje: [
     {
-      title: "Playstreet Rue Frans Binjé",
+      title: "📺 Playstreet Rue Frans Binjé",
       date: "2020-07-11",
       description:
         "Playstreet with a saxophonist 🎷 and kids playing around ⛹️‍♀️ ⚽️ 🚲 and a lot of love ❤️",
@@ -63,21 +63,21 @@ const news = {
   ],
   godefroiddevreese: [
     {
-      title: "Playstreet survey",
+      title: "📝 Playstreet survey",
       date: "2020-09-03",
       description:
         "Please help us make the playstreet better by filling out this form. Merci de nous aider à améliorer notre rue au jeu en nous donnant votre feedback",
       url: "https://forms.gle/Ffry464SfFt85iEF9",
     },
     {
-      title: "Playstreet August 22-23 2020",
+      title: "📺 Playstreet August 22-23 2020",
       date: "2020-08-25",
       description:
         "Playstreet with a concert 🎸🎤 and kids playing around ⛹️‍♀️ ⚽️ 🚲 and a lot of love ❤️",
       url: "https://www.youtube.com/watch?v=Skx4x3g-Xxk",
     },
     {
-      title: "Playstreet July 18-19 2020",
+      title: "📺 Playstreet July 18-19 2020",
       date: "2020-07-20",
       description:
         "Playstreet with a saxophonist 🎷 and kids playing around ⛹️‍♀️ ⚽️ 🚲 and a lot of love ❤️",
@@ -85,7 +85,7 @@ const news = {
     },
     {
       title:
-        "Open letter to the commune of Schaerbeek to give priority to pedestrians",
+        "📝 Open letter to the commune of Schaerbeek to give priority to pedestrians",
       url:
         "https://openletter.earth/open-letter-to-the-city-of-schaerbeek-give-priority-to-pedestrians-runners-and-bicycles-54952bee",
       description:
@@ -93,7 +93,7 @@ const news = {
       date: "2020-05-02",
     },
     {
-      title: "'Staying Alive': deze buren dansen elke avond in hun straat",
+      title: "📺 'Staying Alive': deze buren dansen elke avond in hun straat",
       url:
         "https://www.bruzz.be/videoreeks/donderdag-23-april-2020/video-staying-alive-deze-buren-dansen-elke-avond-hun-straat",
       description:
