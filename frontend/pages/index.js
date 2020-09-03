@@ -25,14 +25,10 @@ function Index({ locale, messages }) {
       <h2>1030 Schaerbeek</h2>
       <ul>
         <li>
-          <Link href="/fransbinje">
-            <A>Frans Binjé</A>
-          </Link>
+          <Link href="/fransbinje">Frans Binjé</Link>
         </li>
         <li>
-          <Link href="/godefroiddevreese">
-            <A>Godefroid Devreese</A>
-          </Link>
+          <Link href="/godefroiddevreese">Godefroid Devreese</Link>
         </li>
       </ul>
       <h1>Useful links</h1>

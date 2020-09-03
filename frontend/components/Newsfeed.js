@@ -63,6 +63,13 @@ const news = {
   ],
   godefroiddevreese: [
     {
+      title: "Playstreet survey",
+      date: "2020-09-03",
+      description:
+        "Please help us make the playstreet better by filling out this form. Merci de nous aider à améliorer notre rue au jeu en nous donnant votre feedback",
+      url: "https://forms.gle/Ffry464SfFt85iEF9",
+    },
+    {
       title: "Playstreet August 22-23 2020",
       date: "2020-08-25",
       description:
