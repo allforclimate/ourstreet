@@ -1,8 +1,16 @@
-import { reduce } from "lodash";
+import Head from "next/head";
+
+const title = {
+  godefroiddevreese: "Our street rue Godefroid Devreese straat",
+  fransbinje: "Our street rue Frans Binjé straat",
+};
 
 const Header = ({ street }) => {
   return (
     <center>
+      <Head>
+        <title>{title[street] || "Our street, our community"}</title>
+      </Head>
       <table>
         <tr>
           <td width={"75%"}>

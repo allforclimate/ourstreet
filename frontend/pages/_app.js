@@ -1,6 +1,5 @@
 import App from "next/app";
 import React from "react";
-import Gun from "gun";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { IntlContext, getLocaleFromHeaders } from "../lib/i18n";
 
@@ -45,20 +44,13 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 class MyApp extends App {
-  constructor() {
-    super();
-    this.gun = Gun("http://localhost:8765" + "/gun");
-  }
-  componentDidMount() {
-    window.gun = this.gun; //To have access to gun object in browser console
-  }
   render() {
     const { Component, pageProps, locale, messages } = this.props;
     return (
       <IntlContext.Provider value={{ locale, messages }}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Component gun={this.gun} {...pageProps} />
+          <Component {...pageProps} />
         </ThemeProvider>
       </IntlContext.Provider>
     );
